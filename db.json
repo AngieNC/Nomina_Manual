@@ -29,6 +29,11 @@
       "valor": "0",
       "tipo": "ingreso",
       "id": 9
+    },
+    {
+      "valor": "5213",
+      "tipo": "ingreso",
+      "id": 10
     }
   ]
 }
