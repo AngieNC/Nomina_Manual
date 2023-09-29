@@ -52,7 +52,6 @@ formulario.addEventListener("submit", async(e)=>{
     }
 
     const enviar = await (await fetch(url, config)).json();
-    
     location.reload();
 });
 
