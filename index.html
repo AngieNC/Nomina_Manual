@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomina</title>
+    <script src="index.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <dialog>
+        <form id="formEdit" action="">
+            <input type="number" name="valor" id="valor" placeholder="Ingrese un valor" autofocus required>
+    
+            <input type="radio" name="tipo" id="caja" value="ingreso" checked><label for="caja">Ingreso</label>
+    
+            <input type="radio" name="tipo" id="caja" value="egreso"><label for="caja">Egreso</label>
+            
+            <input type="submit" name="" id="" class="envio_editar" value="Enviar">
+
+        </form>
+    </dialog>
+    <h2><center>TABLA DE NÓMINA</center></h2>
+    <form id="formAdd" action=""><center>
+        <input type="number" name="valor" id="valor" placeholder="    Ingrese valor">
+        <br>
+        <br>
+        <input type="radio" name="tipo" id="ingreso" value="ingreso" checked><label for="caja" id="ingresoo"> Ingreso</label>
+        <br>
+        <input type="radio" name="tipo" id="egreso" value="egreso"><label for="caja" id="egresoo"> Egreso</label>
+        <br>
+        <br>
+        <input type="submit" name="" id="boton" value="Enviar">
+    </center></form>
+    <br>
+    <br>
+    <br>
+    <table align="center">
+        <thead>
+            <th>ID</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th>Opciones</th>
+        </thead>
+        <tbody id="data-tabla">
+            
+        </tbody>
+    </table>
+</body>
+</html>
