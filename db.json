@@ -1,9 +1,34 @@
 {
   "nomina": [
     {
-      "valor": "10000",
+      "valor": "1221",
       "tipo": "egreso",
-      "id": 1
+      "id": 4
+    },
+    {
+      "valor": "12313",
+      "tipo": "egreso",
+      "id": 5
+    },
+    {
+      "valor": "5",
+      "tipo": "ingreso",
+      "id": 6
+    },
+    {
+      "valor": "0",
+      "tipo": "ingreso",
+      "id": 7
+    },
+    {
+      "valor": "23",
+      "tipo": "ingreso",
+      "id": 8
+    },
+    {
+      "valor": "0",
+      "tipo": "ingreso",
+      "id": 9
     }
   ]
 }
