@@ -18,6 +18,7 @@ h2{
     width: 200px;
     height: 40px;
     border: none;
+    padding: 5px 15px;
 }
 
 #ingresoo, #egresoo{
@@ -75,7 +76,7 @@ table tbody{
     width: 87px;
     height: 40px;
     border: none;
-    background-color: rgb(166, 159, 227);
+    background-color: rgb(245, 104, 104);
     border-radius: 20px;
     cursor: pointer;
     font-size: 17px;
@@ -83,10 +84,15 @@ table tbody{
     color: rgb(42, 40, 40);
 }
 
+.delet:hover{
+    background-color: red;
+    color: #fff;
+}
+
 dialog{
     border: none;
     border-radius: 20px;
-    box-shadow: 0px 2px 400px 200px rgba(0,0,0,0.29);
+    box-shadow: 0px 2px 400px 900px rgba(0, 0, 0, 0.623);
 }
 .envio_editar{
     width: 87px;
