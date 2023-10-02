@@ -6,34 +6,24 @@
       "id": 4
     },
     {
-      "valor": "12313",
-      "tipo": "egreso",
+      "valor": "45685223",
+      "tipo": "ingreso",
       "id": 5
     },
     {
-      "valor": "5",
-      "tipo": "ingreso",
-      "id": 6
-    },
-    {
-      "valor": "0",
-      "tipo": "ingreso",
-      "id": 7
-    },
-    {
-      "valor": "23",
-      "tipo": "ingreso",
+      "valor": "64564465",
+      "tipo": "egreso",
       "id": 8
-    },
-    {
-      "valor": "0",
-      "tipo": "ingreso",
-      "id": 9
     },
     {
       "valor": "5213",
       "tipo": "ingreso",
       "id": 10
+    },
+    {
+      "valor": "56564",
+      "tipo": "egreso",
+      "id": 11
     }
   ]
 }
