@@ -18,8 +18,18 @@ const principalEliminar = async(id)=>{
 
 // Para que funcione el metodo editar
 
+const cancelar = document.querySelector("#cerrar");
+
+
+cancelar.addEventListener("click", async()=>{
+    dialog.close()
+})
+
+
+
 const principalEditar = async(id)=>{  //El asincronico hace que cargue primero todo el archivo y despues lo muestra
-    formu.addEventListener('submit', async(e)=>{
+    
+    formu.addEventListener('submit', async(e)=>{ 
         e.preventDefault();
         let dato = Object.fromEntries(new FormData(e.target));
 
@@ -30,7 +40,7 @@ const principalEditar = async(id)=>{  //El asincronico hace que cargue primero t
         };
         let res = await fetch(url + "/" + id, config);
 
-        dialog.close();
+        
         location.reload();
     });
     
