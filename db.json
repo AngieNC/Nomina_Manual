@@ -1,29 +1,34 @@
 {
   "nomina": [
     {
-      "valor": "1221",
+      "valor": "1000",
+      "tipo": "ingreso",
+      "id": 1
+    },
+    {
+      "valor": "1000",
+      "tipo": "ingreso",
+      "id": 2
+    },
+    {
+      "valor": "1000",
       "tipo": "egreso",
+      "id": 3
+    },
+    {
+      "valor": "1000",
+      "tipo": "ingreso",
       "id": 4
     },
     {
-      "valor": "45685223",
-      "tipo": "ingreso",
+      "valor": "3000",
+      "tipo": "egreso",
       "id": 5
     },
     {
-      "valor": "64564465",
+      "valor": "1000",
       "tipo": "egreso",
-      "id": 8
-    },
-    {
-      "valor": "5213",
-      "tipo": "ingreso",
-      "id": 10
-    },
-    {
-      "valor": "56564",
-      "tipo": "egreso",
-      "id": 11
+      "id": 6
     }
   ]
 }

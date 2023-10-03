@@ -3,7 +3,10 @@ const formulario = document.querySelector("#formAdd");
 const formu = document.querySelector("#formEdit");
 const dialog = document.querySelector ("dialog");
 const url = "http://127.0.0.1:5010/nomina";
-
+const ingreso = document.querySelector("#ingreso");
+const egresos = document.querySelector("#egresos");
+const total = document.querySelector("#total");
+let totel = {egreso:0, ingreso:0};
 
 //Para que funcione el metodo eliminar
 
@@ -16,17 +19,16 @@ const principalEliminar = async(id)=>{
     location.reload(); //Para que cargue ahí mismo
 };
 
-// Para que funcione el metodo editar
 
+// Para que sirva el boton cancelar
 const cancelar = document.querySelector("#cerrar");
-
 
 cancelar.addEventListener("click", async()=>{
     dialog.close()
 })
 
 
-
+// Para que funcione el metodo editar
 const principalEditar = async(id)=>{  //El asincronico hace que cargue primero todo el archivo y despues lo muestra
     
     formu.addEventListener('submit', async(e)=>{ 
@@ -70,24 +72,31 @@ formulario.addEventListener("submit", async(e)=>{
 document.addEventListener("DOMContentLoaded", async(e)=>{
     const tabla = document.querySelector('#data-tabla');
     let res = await (await fetch(url)).json();
-    
-    //Crea un nuevo array y manipula el array que recorre.
-    res.map((elemento)=>{
+    totel = {egreso:0, ingreso:0};
+    for (let i = 0; i < res.length; i++) {
+        if(res[i].tipo=="ingreso") 
+            totel.ingreso = parseInt(totel.ingreso) + parseInt(res[i].valor);
+        else
+            totel.egreso = parseInt(totel.egreso) + parseInt(res[i].valor);
         tabla.insertAdjacentHTML("beforeend", `
         <tr>
-            <td>${elemento.id}</td>
-            <td>${elemento.valor}</td>
-            <td>${elemento.tipo}</td>
+            <td>${res[i].id}</td>
+            <td>${res[i].valor}</td>
+            <td>${res[i].tipo}</td>
             <td>
-                <button id="${elemento.id}" class="edit">Editar</button>
-                <button id="${elemento.id}" class="delet">Eliminar</button>
+                <button id="${res[i].id}" class="edit">Editar</button>
+                <button id="${res[i].id}" class="delet">Eliminar</button>
             </td>
-        </tr>
+         </tr>
         `);
-    });
 
+    }
+    ingreso.innerHTML = `$ ${totel.ingreso}`;
+    egresos.innerHTML = `$ ${totel.egreso}`;
+    total.innerHTML = `$ ${totel.ingreso-totel.egreso}`;
+
+    //Declarar variables eliminar y editar
     const eliminar = document.querySelectorAll('.delet');
-    
     const editar = document.querySelectorAll('.edit');
     
     //Evento eliminar
@@ -105,4 +114,6 @@ document.addEventListener("DOMContentLoaded", async(e)=>{
             principalEditar(elemento.id);
         });
     });
+
 });
+
