@@ -13,17 +13,18 @@
     <dialog>
         <form id="formEdit" action="">
             <input type="number" name="valor" id="valor" placeholder="Ingrese un valor" autofocus required>
-    
             <input type="radio" name="tipo" id="caja" value="ingreso" checked><label for="caja">Ingreso</label>
-    
-            <input type="radio" name="tipo" id="caja" value="egreso"><label for="caja">Egreso</label>
-            
+            <input type="radio" name="tipo" id="caja" value="egreso"><label for="caja">Egreso</label>  
             <input type="submit" name="" id="enviar" class="envio_editar" value="Enviar">
             <input type="button" name="" id="cerrar" class="envio_editar" value="Cancelar">
-
         </form>
     </dialog>
     <h2><center>TABLA DE NÓMINA</center></h2>
+    <div class="valores">
+        <label id="label1">Ingresos</label> : <b id="ingreso"></b><br>
+        <label id="label2">Egresos</label> : <b id="egresos"></b><br>
+        <label id="label3">Total</label> : <b id="total"></b>
+    </div>
     <form id="formAdd" action=""><center>
         <input type="number" name="valor" id="valor" placeholder="    Ingrese valor">
         <br>
@@ -49,5 +50,9 @@
             
         </tbody>
     </table>
+    <footer>
+        <h2>Angie Cardenas</h2>
+        <h4>Derechos Reservados, 2023</h4>
+    </footer>
 </body>
 </html>
