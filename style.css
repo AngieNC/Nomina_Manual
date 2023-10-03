@@ -1,11 +1,10 @@
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 body{
     background-color: rgb(108, 198, 250);
+    margin: 0;
 }
 
 h2{
@@ -138,6 +137,8 @@ dialog{
 }
 
 footer{
+    padding: 0;
+    margin: 0;
     background-color: darkslategray;
     width: 100%;
     text-align: center;
@@ -145,12 +146,14 @@ footer{
 }
 
 footer h2{
+    margin: 0;
     font-size: 2.3rem;
     padding: 20px 0 2px 0;
     color: #c9c0c0;
 }
 
 footer h4{
+    margin: 0;
     font-size: 1.5rem;
     padding: 20px;
     color: #c9c0c0;
